@@ -86,20 +86,20 @@ void Fraction::operator=(const Fraction &y) {
     this->nume = y.nume;
 }
 
-std::ostream& operator<<(std::ostream& os, __int128 t) {
-    if (t==0) return os << "0";
-    if (t<0) {
-        os<<"-";
-        t=-t;
+ostream &operator<<(ostream &os, __int128 t) {
+    if (t == 0) return os << "0";
+    if (t < 0) {
+        os << "-";
+        t = -t;
     }
-    int a[50],ai=0;
-    memset(a,0,sizeof a);
-    while (t!=0){
-        a[ai++]=t%10;
-        t/=10;
+    int a[50],ai = 0;
+    memset(a, 0, sizeof a);
+    while (t != 0){
+        a[ai++] = t % 10;
+        t /= 10;
     }
-    for (int i=1;i<=ai;i++) os<<abs(a[ai-i]);
-    return os<<"";
+    for (int i = 1; i <= ai; i++) os << abs(a[ai-i]);
+    return os << "";
 }
 
 ostream &operator<<(ostream &output, const Fraction &f) {
