@@ -81,7 +81,6 @@ Fraction Fraction::operator/(const Fraction &y) {
 }
 
 void Fraction::operator=(const Fraction &y) {
-  
     this->deno = y.deno;
     this->nume = y.nume;
 }
