@@ -39,20 +39,24 @@ bool check_input(string in_str, int in, int out) {
         return false;
     } else {
         string dict = "0123456789ABCDEF";
-        regex pattern("[" + dict.substr(0, in - 1) + "]+");
+        regex pattern("[" + dict.substr(0, in) + "]+");
         return regex_match(in_str, pattern);
     }
 }
 
-int main() {
-    int in, out;
-    string in_str;
+void input(int& in, int& out, string& in_str) {
     cout << "input metadata: ";
     getline(cin, in_str);
     cout << "input original system: ";
     cin >> in;
     cout << "input target system: ";
     cin >> out;
+}
+
+int main() {
+    int in, out;
+    string in_str;
+    input(in, out, in_str);
     if (check_input(in_str, in, out)) {
         cout << "Result: " << dec2n(n2dec(in_str, in), out) << endl;
     } else {
