@@ -1,16 +1,23 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
 
 class Solution {
+
+    public:
+        int run() {
+            printf("%s", "Please input a, b, c, d: ");
+            scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+            printf("%f\n", newton(1.0, 0.000001));
+            return 0;
+        }
 
     protected:
         double a, b, c, d;
 
-        double newton(double x, double rx){
+        double newton(double x, double rx) {
             double res;
-            res = x - f(x) / f1(x);
-            return (abs(x - res) <= rx)? res: newton(res, rx);
+            res = x - f(x)/f1(x);
+            return (std::abs(x - res) <= rx)? res: newton(res, rx);
         }
 
         double f(double x) {
@@ -19,14 +26,6 @@ class Solution {
 
         double f1(double x) {
             return 3 * this->a * pow(x, 2) + 2 * this->b * x + c;
-        }
-
-    public:
-        int run() {
-            cout << "Please input a, b, c, d: ";
-            cin  >> a >> b >> c >> d;
-            cout << newton(1.0, 0.000001) << endl;
-            return 0;
         }
 };
 

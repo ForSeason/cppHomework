@@ -1,14 +1,13 @@
 #include <iostream>
-using namespace std;
 
 class Solution {
-
-    protected:
 
     public:
         int run() {
             return 0;
         }
+
+    protected:
 };
 
 int main() {

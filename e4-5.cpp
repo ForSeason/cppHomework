@@ -1,7 +1,15 @@
 #include <iostream>
-using namespace std;
 
 class Solution {
+    
+    public:
+        int run() {
+            double x;
+            printf("%s", "Please input x: ");
+            scanf("%lf", &x);
+            printf("sinh(x) = %f\n", sinh(x));
+            return 0;
+        }
     protected:
         double sinh(double x) {
             return (exp(x) - exp(-x)) / 2.0;
@@ -21,15 +29,6 @@ class Solution {
         
         double fac(int x) {
             return (x > 1)? x * fac(x - 1): 1;
-        }
-    
-    public:
-        int run() {
-            double x;
-            cout << "Please input x: ";
-            cin  >> x;
-            cout << "sinh(x) = " << sinh(x) << endl;
-            return 0;
         }
 };
 
