@@ -8,6 +8,9 @@ class Solution {
         }
 
     protected:
+        void input() {
+            return;
+        }
 };
 
 int main() {
