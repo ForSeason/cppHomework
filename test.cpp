@@ -5,17 +5,14 @@ class Solution {
 
     public:
         int run() {
-            int n;
-            printf("请输入数组长度：\n");
-            scanf("%d", &n);
-            for (int i = 0; i < n; i++) intMat.push_back(std::vector<int>);
-            for (auto intList:intMat) for (auto i:intList) i = 1;
-            printf("\n");
+            printf("%c\n", (a1, a2));
+            printf("%d\n", (a=3*5, a*4, a+5));
             return 0;
         }
 
     protected:
-        std::vector<std::vector<int>> intMat;
+        char a1='M', a2='m';
+        int a;
 };
 
 int main() {

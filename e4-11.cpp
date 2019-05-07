@@ -8,7 +8,7 @@ class Solution {
         }
 
     public:
-        int run(){
+        int run() {
             int n;
             cout << "Please input n: ";
             cin  >> n;
