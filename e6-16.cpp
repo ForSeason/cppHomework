@@ -28,7 +28,7 @@ class Solution {
                     continue;
                 }
                 end = start;
-                while (*(end + 1) > '0' && *(end + 1) < '9') {
+                while (*(end + 1) >= '0' && *(end + 1) <= '9') {
                     end++;
                 }
                 p = res[n];

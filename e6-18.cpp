@@ -5,8 +5,13 @@ class Solution {
     public:
         int run() {
             input();
-            output();
-            return 0;
+            if (check_input()) {
+                output();
+                return 0;
+            } else {
+                std::cout << "error!" << std::endl;
+                return 1;
+            }
         }
 
         Solution() {
@@ -33,6 +38,10 @@ class Solution {
         void input() {
             std::cin >> n;
             return;
+        }
+
+        bool check_input() {
+            return (n < 1 || n > 12)? false: true;
         }
 
         void output() {
